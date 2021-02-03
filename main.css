@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+.d_flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 65px;
+}
+
+/* start header */
+.header {
+  padding: 25px 0;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.header .menu li {
+  padding: 0 15px;
+}
+.header .menu li a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.header .menu li a img {
+  margin-right: 5px;
+  width: 20px;
+}
+.header .menu li a:hover {
+  opacity: 0.8;
+}
+
+/* end hedaer */
+/* start main section*/
+.main_section {
+  background-image: url("./img/main_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  padding: 120px 0 45px;
+}
+.main_section .container {
+  height: 100%;
+}
+.main_section_content {
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.main_section .top h1.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 65px;
+  text-align: center;
+}
+.main_section .top h2.subtitle {
+  font-size: 28px;
+  line-height: 38px;
+  text-align: center;
+  font-weight: 400;
+}
+.main_section .bottom {
+  max-width: 888px;
+}
+.main_section .bottom .numbers {
+  align-items: stretch;
+}
+.main_section .bottom .numbers_item {
+  width: 33.33%;
+  padding: 0 22px 50px;
+}
+.main_section .bottom .numbers_item h3 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 65px;
+}
+.main_section .bottom .numbers_item p {
+  text-align: center;
+  max-width: 267px;
+}
+.main_section .bottom .sci {
+  justify-content: center;
+}
+.main_section .bottom .sci li {
+  padding: 0 11px;
+}
+
+/*end main setion*/
+/* start section our projects*/
+section.our_projects {
+  background: #666666;
+  padding: 100px 0 0;
+}
+section.our_projects p.small_title {
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 400;
+  color: #828282;
+}
+section.our_projects .house_cards {
+  padding-bottom: 100px;
+}
+section.our_projects .big_cards,
+section.our_projects .small_cards {
+  padding-top: 100px;
+  flex-wrap: nowrap;
+}
+section.our_projects .big_cards_item,
+section.our_projects .small_cards_item {
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.25);
+  width: 50%;
+}
+section.our_projects .big_cards_item:not(:last-child),
+section.our_projects .small_cards_item:not(:last-child) {
+  margin-right: 100px;
+}
+section.our_projects .big_cards_item img,
+section.our_projects .small_cards_item img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.our_projects .big_cards_text,
+section.our_projects .small_cards_text {
+  padding: 30px;
+}
+section.our_projects .big_cards_text h2,
+section.our_projects .small_cards_text h2 {
+  padding-bottom: 25px;
+}
+section.our_projects .big_cards_text p,
+section.our_projects .small_cards_text p {
+  color: #F2F2F2;
+  font-weight: 400;
+  padding-bottom: 25px;
+}
+section.our_projects .big_cards_price,
+section.our_projects .small_cards_price {
+  justify-content: start;
+}
+section.our_projects .big_cards_price .price,
+section.our_projects .small_cards_price .price {
+  color: #97C705;
+  padding-right: 40px;
+}
+section.our_projects .big_cards_price a,
+section.our_projects .small_cards_price a {
+  color: #fff;
+}
+section.our_projects .small_cards_item {
+  width: 25%;
+  max-width: 355px;
+}
+section.our_projects .small_cards_text h2 {
+  font-size: 28px;
+  line-height: 38px;
+}
+section.our_projects .small_cards_price {
+  justify-content: space-between;
+}
+
+/* end section our projects*/
+/*start fully finished section*/
+.fully_finished {
+  background-color: #666666;
+}
+.fully_finished .wrapper_block {
+  background-image: url("./img/main_bg_2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 730px;
+  height: 100%;
+  position: relative;
+}
+.fully_finished .wrapper_block:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(256.85deg, rgba(255, 255, 255, 0.7) 0%, rgba(5, 11, 4, 0.7) 88.29%);
+  opacity: 0.5;
+}
+
+/*end fully finished section*/
+
+/*# sourceMappingURL=main.css.map */
