@@ -47,6 +47,36 @@ h2 {
   font-weight: 700;
   line-height: 65px;
 }
+section {
+  padding: 50px 0;
+}
+.green_btn {
+  width: 100%;
+  max-width: 225px;
+  color: #fff;
+  background-color: #97C705;
+  border-radius: 5px;
+  border: 1px solid #97C705;
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  &:hover {
+    color: #97C705;
+    background-color: #fff;
+  }
+}
+.trspnt_btn {
+  color: #fff;
+  padding: 15px;
+  font-size: 18px;
+  width: 100%;
+  max-width: 225px;
+  text-align: center;
+  &:hover {
+    border-radius: 5px;
+    border: 1px solid #97C705;
+  }
+}
 
 /* start header */
 .header {
@@ -138,20 +168,20 @@ h2 {
   }
 }
 /*end main setion*/
+p.small_title {
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 400;
+  color: #828282;
+}
 /* start section our projects*/
 section.our_projects {
-  background: #666666;
-  padding: 100px 0 0;
-
-  p.small_title {
-    font-size: 28px;
-    line-height: 38px;
-    font-weight: 400;
-    color: #828282;
-  }
-
+  background: #313131;
   .house_cards {
     padding-bottom: 100px;
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 
   .big_cards,
@@ -221,7 +251,7 @@ section.our_projects {
 /* end section our projects*/
 /*start fully finished section*/
 .fully_finished {
-  background-color: #666666;
+  background-color: #313131;
   .wrapper_block {
     background-image: url("./img/main_bg_2.png");
     background-repeat: no-repeat;
@@ -241,6 +271,133 @@ section.our_projects {
       background: linear-gradient(256.85deg, rgba(255, 255, 255, 0.7) 0%, rgba(5, 11, 4, 0.7) 88.29%);
       opacity: 0.5;
     }
+    .info_block {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 500px;
+      padding: 150px 0;
+      margin-left: 120px;
+      h2 {
+        padding-bottom: 65px;
+      }
+      .active_buttons {
+        padding-top: 80px;
+
+      }
+    }
   }
 }
 /*end fully finished section*/
+/* start advantages section*/
+.advantages {
+  background-color: #313131;
+  h2 {
+    padding-bottom: 70px;
+  }
+  .advantages_columns {
+    justify-content: space-between;
+    align-items: stretch;
+
+    height: 100%;
+    &_item {
+      width: 25%;
+      flex-direction: column;
+      align-items: start;
+      max-width: 325px;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      &:not(:last-child) {
+        padding-right: 30px;
+      }
+      img {
+        width: 70px;
+        max-height: 70px;
+        margin-bottom: 30px;
+      }
+      p.small_title {
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 30px;
+        height: 100%;
+      }
+      p.advantages_text {
+        height: 100%;
+      }
+    }
+  }
+
+}
+/* end advantages section*/
+/* start gallery section*/
+.gallery {
+  background-color: #3b3b3b;
+  .swiper-container {
+
+    .swiper-pagination-bullet {
+      width: 13px;
+      height: 13px;
+      border-radius: 0;
+      background-color: #767676;
+
+      &-active {
+        background-color: #97C705;
+      }
+    }
+  }
+  .swiper-pagination {
+    text-align: right;
+    &-bullets {
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &-bullet {
+      display: block;
+      margin: 5px 0 !important;
+    }
+  }
+  .swiper-slide {
+
+  }
+  .slider_wrapper {
+    .slide {
+      align-items: stretch;
+      height: 100%;
+      .col {
+        width: 25%;
+        height: 100%;
+        padding-right: 50px;
+        &:not(:last-child) {
+
+          width: 37.5%;
+        }
+        img {
+          width: 580px;
+        }
+        h2 {
+          font-size: 38px;
+        }
+        p.small_title {
+          font-size: 18px;
+        }
+        p.item_text {
+          font-size: 18px;
+          padding-bottom: 30px;
+        }
+        a.link_more {
+          color: #97C705;
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+/*end gallery section*/
+
