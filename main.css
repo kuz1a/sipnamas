@@ -57,6 +57,12 @@ h2 {
   font-weight: 700;
   line-height: 65px;
 }
+@media (max-width: 767px) {
+  h2 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
 
 section {
   padding: 50px 0;
@@ -126,7 +132,7 @@ section {
   background-position: center;
   width: 100%;
   height: 100vh;
-  padding: 120px 0 45px;
+  padding: 150px 0 45px;
 }
 .main_section .container {
   height: 100%;
@@ -159,15 +165,27 @@ section {
   width: 33.33%;
   padding: 0 22px 50px;
 }
+@media (max-width: 575px) {
+  .main_section .bottom .numbers_item {
+    width: 100%;
+    padding: 0 15px 25px;
+  }
+}
 .main_section .bottom .numbers_item h3 {
   text-align: center;
   font-size: 48px;
   font-weight: 700;
   line-height: 65px;
 }
-.main_section .bottom .numbers_item p {
+.main_section .bottom .numbers_item p.numbers_subtitle {
   text-align: center;
   max-width: 267px;
+}
+@media (max-width: 575px) {
+  .main_section .bottom .numbers_item p.numbers_subtitle {
+    max-width: none;
+    width: 100%;
+  }
 }
 .main_section .bottom .sci {
   justify-content: center;
@@ -188,6 +206,11 @@ p.small_title {
 section.our_projects {
   background: #313131;
 }
+@media (max-width: 1365px) {
+  section.our_projects .container {
+    padding: 0 15px;
+  }
+}
 section.our_projects .house_cards {
   padding-bottom: 100px;
 }
@@ -198,6 +221,7 @@ section.our_projects .big_cards,
 section.our_projects .small_cards {
   padding-top: 100px;
   flex-wrap: nowrap;
+  align-items: stretch;
 }
 section.our_projects .big_cards_item,
 section.our_projects .small_cards_item {
@@ -241,9 +265,57 @@ section.our_projects .big_cards_price a,
 section.our_projects .small_cards_price a {
   color: #fff;
 }
+@media (max-width: 991px) {
+  section.our_projects .big_cards {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 991px) {
+  section.our_projects .big_cards_item {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  section.our_projects .big_cards_item:not(:last-child) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 991px) {
+  section.our_projects .small_cards {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 section.our_projects .small_cards_item {
   width: 25%;
   max-width: 355px;
+}
+section.our_projects .small_cards_item:not(:last-child) {
+  margin-right: 10px;
+}
+@media (max-width: 991px) {
+  section.our_projects .small_cards_item:not(:last-child) {
+    margin-right: 0;
+    padding: 0 7px;
+  }
+}
+@media (max-width: 991px) {
+  section.our_projects .small_cards_item {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 575px) {
+  section.our_projects .small_cards_item {
+    width: 100%;
+    max-width: none;
+  }
+}
+section.our_projects .small_cards_text {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
 }
 section.our_projects .small_cards_text h2 {
   font-size: 28px;
@@ -292,6 +364,17 @@ section.our_projects .small_cards_price {
 .fully_finished .wrapper_block .info_block .active_buttons {
   padding-top: 80px;
 }
+@media (max-width: 575px) {
+  .fully_finished .wrapper_block .info_block .active_buttons {
+    flex-wrap: nowrap;
+  }
+}
+@media (max-width: 767px) {
+  .fully_finished .wrapper_block .info_block {
+    margin: 0;
+    padding: 100px 15px;
+  }
+}
 
 /*end fully finished section*/
 /* start advantages section*/
@@ -328,8 +411,23 @@ section.our_projects .small_cards_price {
   margin-bottom: 30px;
   height: 100%;
 }
+@media (max-width: 991px) {
+  .advantages .advantages_columns_item p.small_title {
+    font-size: 20px;
+  }
+}
 .advantages .advantages_columns_item p.advantages_text {
   height: 100%;
+}
+@media (max-width: 767px) {
+  .advantages .advantages_columns_item {
+    width: 50%;
+    margin-bottom: 40px;
+    padding: 0 5px;
+  }
+  .advantages .advantages_columns_item:not(:last-child) {
+    padding: 0 5px;
+  }
 }
 
 /* end advantages section*/
@@ -372,8 +470,24 @@ section.our_projects .small_cards_price {
   height: 100%;
   padding-right: 50px;
 }
+@media (max-width: 1200px) {
+  .gallery .slider_wrapper .slide .col {
+    width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .gallery .slider_wrapper .slide .col {
+    padding-right: 0;
+    padding: 0 10px;
+  }
+}
 .gallery .slider_wrapper .slide .col:not(:last-child) {
   width: 37.5%;
+}
+@media (max-width: 1200px) {
+  .gallery .slider_wrapper .slide .col:not(:last-child) {
+    width: 50%;
+  }
 }
 .gallery .slider_wrapper .slide .col img {
   width: 580px;
@@ -395,5 +509,107 @@ section.our_projects .small_cards_price {
 }
 
 /*end gallery section*/
+/* start create_home*/
+.create_home {
+  background-color: #313131;
+}
+.create_home .left_part {
+  width: 70%;
+}
+.create_home .left_part h2 {
+  padding-bottom: 60px;
+}
+.create_home .left_part p.small_title {
+  padding-bottom: 0;
+}
+.create_home .left_part p {
+  padding-bottom: 30px;
+}
+.create_home .left_part .active_buttons {
+  justify-content: start;
+  flex-wrap: nowrap;
+}
+.create_home .left_part .active_buttons .green_btn {
+  margin-right: 60px;
+}
+@media (max-width: 575px) {
+  .create_home .left_part .active_buttons .green_btn {
+    margin-right: 10px;
+    padding: 10px 7px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 575px) {
+  .create_home .left_part .active_buttons .trspnt_btn {
+    font-size: 14px;
+    padding: 10px 7px;
+  }
+}
+@media (max-width: 767px) {
+  .create_home .left_part {
+    width: 100%;
+  }
+}
+.create_home .right_part {
+  width: 30%;
+}
+@media (max-width: 767px) {
+  .create_home .right_part {
+    margin-top: 50px;
+    width: 100%;
+  }
+}
+
+/* end create_home */
+/* start section map */
+section.map {
+  padding: 0;
+  background-color: #313131;
+}
+section.map .map_item {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* end section map*/
+/* start footer */
+.footer {
+  background-color: #313131;
+  padding: 25px 0 50px;
+}
+.footer .container {
+  max-width: 1400px;
+}
+.footer .footer_top {
+  padding-bottom: 60px;
+}
+.footer .footer_top .footer_links {
+  justify-content: start;
+}
+.footer .footer_top .footer_links li a {
+  color: #fff;
+}
+.footer .footer_top .footer_links li:not(:last-child) {
+  margin-right: 60px;
+}
+.footer .footer_bottom {
+  align-items: start;
+}
+.footer .footer_bottom p.small_title {
+  color: #fff;
+  font-weight: 700;
+  padding-bottom: 35px;
+}
+.footer .footer_bottom .contact_links li,
+.footer .footer_bottom .shedule li {
+  line-height: 24px;
+}
+.footer .footer_bottom .contact_links li a.green_link,
+.footer .footer_bottom .shedule li a.green_link {
+  color: #97C705;
+}
+
+/* end footer */
 
 /*# sourceMappingURL=main.css.map */
